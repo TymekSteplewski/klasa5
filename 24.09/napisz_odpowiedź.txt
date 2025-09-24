@@ -1,0 +1,27 @@
+1.
+ Za pomocą jednej linijki kodu JavaScript, wyświetl w konsoli kolekcję elementów img jakie są na stronie.
+ document.getElementsByTagName('img');
+
+2.
+ Za pomocą jednej linijki kodu JavaScript, wyświetl w konsoli kolekcję wszystkich linków jakie są na stronie.
+ document.getElementsByTagName('src');
+
+3.
+ Za pomocą jednej linijki kodu JavaScript, zmień w elemencie mojElement czcionkę na Arial
+ document.getElementById('mojElement').style.fontFamily = 'Arial';
+
+4.
+ Użyj metody getElementsByTagName, aby znaleźć pierwszy element <p> na stronie i zmienić jego teść na "Informatyka".
+ document.getElementsByTagName('p').innerText('Informatyka');
+ 
+5.
+ Za pomocą jednej linijki kodu JavaScript zmień kolor tekstu w elemencie <span id="answer">x = 27</span> na czerwony.
+ document.getElementById('answer').style.color = 'red';
+
+6.
+ Jak, w kontekście języka JavaScript, rozwijamy skrót DOM?
+ Document Object Method
+
+7.
+ Jaką metodą JavaScript stworzymy element "span"? Podaj przykład.
+ Za pomocą 'createElement()': dokument.createElement('span');

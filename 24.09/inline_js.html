@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <textarea id="text" onfocus="this.style.backgroundColor = 'yellow';">
+        </textarea>
+    </div>
+    <p>
+        <input id="upper" onblur="this.value = this.value.toUpperCase();">
+    </p>
+    <p>
+        <select id="colors" name="colors" onchange="let colors = document.getElementById('colors').style.color = this.value;">
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="blueviolet">Blueviolet</option>
+            <option value="burlywood">Burlywood</option>
+            <option value="bisque">Bisque</option>
+        </select>
+    </p>
+    <p id="free" onclick="this.style.fontSize = 'xx-large';" ondblclick="this.style.fontSize = 'medium';">
+        Gżegżółka
+    </p>
+    <div>
+        <img id="amwc" src="amwc.jpg" oncontextmenu="alert(this.src)">
+    </div>
+    <div>
+        <input id="abc" type="text" onkeyup="let abc = document.getElementById('abc').value; document.getElementById('def').innerHTML = abc;">
+        <p id="def">
+        </p>
+    </div>
+    <h1 id="duze" style="color: green;" onmouseover="this.style.textShadow = '1px 1px 5px green';" onmouseout="this.style.textShadow = 'none';">
+        Dziś jest piątek
+    </h1>
+</body>
+</html>
