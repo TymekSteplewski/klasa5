@@ -1,10 +1,10 @@
 1.
  Za pomocą jednej linijki kodu JavaScript, wyświetl w konsoli kolekcję elementów img jakie są na stronie.
- document.getElementsByTagName('img');
+ console.log(images);
 
 2.
  Za pomocą jednej linijki kodu JavaScript, wyświetl w konsoli kolekcję wszystkich linków jakie są na stronie.
- document.getElementsByTagName('src');
+ console.log(src);
 
 3.
  Za pomocą jednej linijki kodu JavaScript, zmień w elemencie mojElement czcionkę na Arial

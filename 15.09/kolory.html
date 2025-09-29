@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+        td{
+            padding: 30px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .gold{
+            background-color: gold;
+        }
+
+        .khaki{
+            background-color: khaki;
+        }
+
+        .silver{
+            background-color: silver;
+        }
+
+        .peru{
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="example1">Zmień kolor tekstu</h1>
+    <table>
+        <td onmouseover="document.getElementById('example1').style.color='gold'" class="gold"
+            onmouseout="document.getElementById('example1').style.color='black'">gold</td>
+        <td onmouseover="document.getElementById('example1').style.color='khaki'" class="khaki"
+            onmouseout="document.getElementById('example1').style.color='black'">khaki</td>
+        <td onmouseover="document.getElementById('example1').style.color='silver'" class="silver"
+            onmouseout="document.getElementById('example1').style.color='black'">silver</td>
+        <td onmouseover="document.getElementById('example1').style.color='peru'" class="peru"
+            onmouseout="document.getElementById('example1').style.color='black'">peru</td>
+    </table>
+</body>
+</html>
