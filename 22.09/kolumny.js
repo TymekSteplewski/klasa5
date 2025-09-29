@@ -16,7 +16,7 @@ for(const el of sekcje){
 const maincolumnh1 = document.querySelector('.main_column h1');
 console.log({maincolumnh1});
 maincolumnh1.textContent = 'Specjalność szefa:';
-
+dd
 const maincol = document.querySelector('.main_column');
 const p1 = document.createElement('p');
 p1.textContent = 'Kebab na frytkach -_-';
