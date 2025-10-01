@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarowka</title>
+    <style>
+        fieldset{
+            border: none;
+            text-align: center;
+        }
+
+        table{
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            padding: 10px;
+        }
+        
+        .kolor{
+            background-color: salmon;
+        }
+
+        .mid{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <img src="zaruwaoff.png" id="main-zarowka" ondblclick="this.src = 'zaruwaspalona.png';">
+        <table>
+            <tr>
+                <th class="kolor">
+                    <input type="button" id="but-on" value="ON">
+                </th>
+                <th class="kolor">
+                    <input type="button" id="but-off" value="OFF">
+                </th>
+            </tr>
+            <tr>
+                <th class="mid">
+                    <input for="on" name="on-off" type="radio" id="radio-on" value="wlacz">
+                    <label for="on">Włączono</label>
+                </th>
+                <th>
+                    <input for="off" name="on-off" type="radio" id="radio-off" value="wylacz">
+                    <label for="off">Wyłączono</label>
+                </th>
+            </tr>
+            <tr>
+                <th class="kolor" colspan="2">
+                    <input type="checkbox" id="check" for="check">
+                    <label for="check" id="sign">Wyłączono</label>
+                </th>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="zarowka.js"></script>
+</body>
+</html>
