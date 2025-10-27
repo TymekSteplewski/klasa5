@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="prompttext">Wywołanie rzeczy typu prompt</button>
+    <script>
+        document.getElementById('prompttext').addEventListener("click", function(){
+            let animal = prompt('Wpisz ulubione zwierzę!')
+            if (animal != null){
+                alert('Twoje ulubione zwierzę to: ' + animal)
+            } 
+        })
+    </script>
+</body>
+</html>

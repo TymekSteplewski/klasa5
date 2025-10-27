@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('Konik na biegunach.')">Wywołanie rzeczy typu 'alert'</button><br><br>
+    <button id="alerttext">Wywołanie rzeczy typu <u>'alert'</u></button>
+    <script>
+        document.getElementById('alerttext').addEventListener("click", function(){
+            alert('Konik na biegunach.');
+        })
+    </script>
+</body>
+</html>
