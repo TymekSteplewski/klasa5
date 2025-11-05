@@ -6,33 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div id="diw">
         <p>
-            <del>
-                Elementu &lt;del&gt; używamy do tworzenia tekstu przekreślonego
-            </del>
+                Elementu &lt;del&gt; <del>używamy do tworzenia tekstu przekreślonego</del>
         </p>
         <p>
-            <code>
-                Elementu &lt;code&gt; używamy do tworzenia tekstu o stałej szerokości czcionki
-            </code>
+                Elementu &lt;code&gt; <code>używamy do tworzenia tekstu o stałej szerokości czcionki</code>
         </p>
         <p>
-            <strong>
-                Elementu &lt;strong&gt; używamy do tworzenia tekstu pogrubionego
-            </strong>
+                Elementu &lt;strong&gt; <strong>używamy do tworzenia tekstu pogrubionego</strong>
         </p>
         <p>
-            <em>
-                Elementu &lt;em&gt; używamy do tworzenia tekstu z emfazoą, czyli takiego, na który chcemy położyć większy nacisk
-            </em>
+                Elementu &lt;em&gt; <em>używamy do tworzenia tekstu z emfazą, czyli takiego, na który chcemy położyć większy nacisk</em>
         </p>
     </div>
-    <button>Znajdź i zmień</button>
+    <button id="przycisk">Znajdź i zmień</button>
     <script>
-        let but = document.querySelector('div')
-
-        console.log(but.tagName)
+        let buton = document.getElementById('przycisk')
+        buton.addEventListener('click', function(){
+            let rower = document.getElementById('diw')
+            let tag = rower.querySelectorAll('*')
+            console.log(tag)
+            for(let banan of tag){
+                if(banan.tagName.toLowerCase() === 'strong'){
+                    banan.style.border = '10px dotted green'
+                }
+            }
+        })
     </script>
 </body>
 </html>

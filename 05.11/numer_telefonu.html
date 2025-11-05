@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cyf{
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Numer telefonu: 57<span>5</span>-<span>838</span>-<span>345</span></h1>
+    <input id="check" type="checkbox">
+    <label for="check">Pokaż cały numer telefonu</label>
+    <script>
+        const chb = document.getElementById('check')
+        let numb = document.querySelectorAll('span')
+
+        numb.forEach(span => span.classList.add('cyf'))
+
+        chb.addEventListener('click', function(){
+            if(this.checked == true){
+                numb.forEach(span => span.classList.remove('cyf'))
+            } else {
+                numb.forEach(span => span.classList.add('cyf'))
+            }
+        })
+    </script>
+</body>
+</html>
