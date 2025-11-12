@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            display: inline-block;
+        }
+        td{
+            border-left: 1px solid brown;
+            border-bottom: 1px solid brown;
+            border-right: 1px solid brown;
+        }
+        div{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table id="skrzynka1">
+        <caption>Skrzynka #1</caption>
+        <tr>
+            <td>
+                <div id="pole1_1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+                    <img id="img1" src="japko_papierowka.jpg" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+                </div>
+            </td>
+            <td>
+                <div id="pole1_2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+                    <img id="img2" src="japko_antonowka.jpg" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+                </div>
+            </td>
+            <td>
+                <div id="pole1_3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+                    <img id="img3" src="japko_gala.jpg" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+                </div>
+            </td>
+            <td>
+                <div id="pole1_4" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+                    <img id="img4" src="japko_ligol.jpg" draggable="true" ondragstart="dragstartHandler(event)" width="88" height="31">
+                </div>
+            </td>
+        </tr>
+    </table><br>
+    <table id="skrzynka2">
+        <caption>Skrzynka #2</caption>
+        <tr>
+            <td>
+                <div id="pole2_1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            </td>
+            <td>
+                <div id="pole2_2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            </td>
+            <td>
+                <div id="pole2_3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            </td>
+            <td>
+                <div id="pole2_4" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function dragstartHandler(ev) {
+            ev.dataTransfer.setData('text', ev.target.id)
+        }
+
+        function dragoverHandler(ev) {
+            ev.preventDefault()
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault()
+            let data = ev.dataTransfer.getData('text')
+            ev.target.appendChild(document.getElementById(data))
+
+            let abc = document.getElementById(data)
+
+            if(ev.target.tagName === 'TD'){
+                if(ev.target.children.length > 0){
+                } else {
+                    ev.target.appendChild(abc)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
